@@ -58,6 +58,13 @@
     object-fit: cover;
 }
 
+
+.dde {
+    width: 400px;
+    height: 400px;
+    background: black;
+}
+
 /* .music {
     position: relative;
     text-align: center;
