@@ -116,7 +116,7 @@ function uploadMusic()
         </script>";
     }
 
-    if ($ukuranFile > 10000000) {
+    if ($ukuranFile > 20000000) {
         echo "<script>
         alert('ukuran Music terlalu besar');
         </script>";
