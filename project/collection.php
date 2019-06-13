@@ -1,7 +1,10 @@
 <?php
 require_once '../config/config.php';
+require_once 'function.php';
 
+$music = query("SELECT * FROM tb_music");
 
+// var_dump($music);
 
 ?>
 <!doctype html>
@@ -61,19 +64,26 @@ require_once '../config/config.php';
                     <img src=>assets/img/50099555_p0.jpg  " alt="">
                     <a href="" class="music">laaaaa</a>
                 </div> -->
-                <div class="card box a">
-                    <img src="<?= baseUrl;   ?>assets/img/50099555_p0.jpg  " class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <a href="">lerem</a>
-                        <div class="row content">
-                            <div class="col icon">a</div>
-                            <div class="col view">3123</div>
-                            <div class="col commen">d</div>
-                            <div class="col pesan">r</div>
+                <?php foreach ($music as $lagu) : ?>
+
+
+
+                    <div class="card box a">
+                        <img src="<?= baseUrl;   ?>assets/img/<?= $lagu['thumbnail'];   ?>      " class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <a href=""><?= $lagu['judul'];   ?> </a>
+                            <p><?= $lagu['deskripsi'];   ?> </p>
+                            <div class="row content">
+                                <div class="col artis"><?= $lagu['artis'];   ?> </div>
+                                <div class="col view">3123</div>
+                                <div class="col commen">d</div>
+
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="card box b">
+                <?php endforeach ?>
+
+                <!-- <div class="card box b">
                     <img src="<?= baseUrl;   ?>assets/img/50099555_p0.jpg " class="card-img-top" alt="...">
                     <div class="card-body">
                         <a href="">lerem</a>
@@ -243,7 +253,7 @@ require_once '../config/config.php';
                             <div class="col pesan">r</div>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>

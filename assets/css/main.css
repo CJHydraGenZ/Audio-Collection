@@ -59,10 +59,10 @@
 }
 
 
-.dde {
-    width: 400px;
-    height: 400px;
-    background: black;
+.tombol {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 /* .music {
